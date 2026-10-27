@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090a0c">
+    <meta name="description" content="Dino Runner Edición Plata: un juego arcade creado con HTML, CSS y JavaScript.">
+    <title>Dino Runner | Edición Plata</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <main class="game-shell">
+        <header class="topbar">
+            <a class="back-link" href="../index.html">← Portfolio</a>
+            <span class="edition">ARCADE <span> / </span> EDICIÓN PLATA </span>
+            <button id="sound-toggle" class="icon-button" type="button"
+                aria-label="Activar o desactivar sonido" aria-pressed="true">♫</button>
+        </header>
+
+        <section class="intro">
+            <p class="eyebrow">UNA EXPERIENCIA DE ARCADE ÚNICA</p>
+            <h1>DINO <span>RUNNER</span></h1>
+            <p class="subtitle">Supera tus propios límites.</p>
+        </section>
+
+        <section class="game-panel" aria-label="Zona de juego">
+            <div class="stats">
+                <div>
+                    <span class="stat-label">PUNTUACIÓN</span>
+                    <strong id="score">00000</strong>
+                </div>
+                <div>
+                    <span class="stat-label">RÉCORD</span>
+                    <strong id="best-score">00000</strong>
+                </div>
+            </div>
+
+            <canvas id="game-canvas" width="960" height="360"
+                aria-label="Dino Runner. Pulsa espacio o toca la pantalla para saltar.">
+                Tu navegador no admite Canvas.
+            </canvas>
+
+            <div id="game-overlay" class="game-overlay">
+                <p id="overlay-label" class="eyebrow">TÚ DECIDES CUANDO EMPIEZA</p>
+                <h2 id="overlay-title">COMIENZA LA CARRERA</h2>
+                <p id="overlay-message">Esquiva los obstáculos y supera tu récord.</p>
+                <button id="start-button" class="primary-button" type="button">
+                    <span>▶</span> JUGAR
+                </button>
+            </div>
+
+            <div class="game-footer">
+                <span id="game-status">SISTEMA EN ESPERA</span>
+                <span>ESPACIO / CLICK PARA SALTAR</span>
+            </div>
+        </section>
+
+        <section class="controls">
+            <div class="control-item">
+                <kbd>ESPACIO</kbd>
+                <span>Saltar</span>
+            </div>
+            <div class="control-item">
+                <kbd>S</kbd>
+                <span>Agacharse</span>
+            </div>
+            <div class="control-item">
+                <kbd>ESC</kbd>
+                <span>Pausar</span>
+            </div>
+            <div class="control-item">
+                <kbd>R</kbd>
+                <span>Reiniciar</span>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <span>DISEÑADO Y DESAROLLADO CON HTML, CSS & JS</span>
+            <span>© EDICIÓN PLATA</span>
+        </footer>
+    </main>
+</body>
+</html>

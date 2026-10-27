@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Portfolio de un estudiante de Desarrollo de Aplicaciones Web (DAW). Proyectos, formación y tecnologías.">
+  <title>David García | Desarrollador web en formación</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="David García - Ir al inicio">
+      <svg class="brand-logo" viewBox="0 0 100 100" role="img" aria-label="DG">
+        <path class="logo-d" d="M12 18 H35 C52 18 62 29 62 44 C62 59 52 70 35 70 H12 Z M28 32 V56 H35 C43 56 48 52 48 44 C48 36 43 32 35 32 Z" fill-rule="evenodd"/>
+        <path class="logo-g" d="M72 43 C66 37 59 36 52 40 L43 50 L48 61 L55 55 C58 53 61 53 65 55 V67 H56 C48 67 43 62 43 54 L31 66 C36 78 46 84 59 84 H78 V45 H59 V57 H66 V70 H59 C48 70 39 62 39 51 C39 37 50 27 63 27 C72 27 79 31 84 37 Z"/>
+        <path class="logo-slash" d="M17 83 L87 14 L76 33 L28 78 Z"/>
+      </svg>
+      <span class="brand-name">DAVID GARCÍA</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a class="nav-contact" href="#contacto">Contacto <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> ESTUDIANTE DE DAW · EN CONSTANTE APRENDIZAJE</p>
+
+        <h1>Construyendo ideas<br>con <span class="muted-word">código</span><span class="cursor">_</span></h1>
+
+        <p class="hero-description">Soy estudiante de Desarrollo de Aplicaciones Web y estoy desarrollando mis habilidades creando proyectos, resolviendo problemas y aprendiendo nuevas tecnologías.</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#proyectos">Ver proyectos <span>↓</span></a>
+          <a class="button button-secondary" href="#contacto">Contactar <span>↗</span></a>
+        </div>
+
+        <div class="hero-meta">
+          <span>01 / PORTFOLIO PERSONAL</span>
+          <span>ESPAÑA · DAW</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Ilustración decorativa de código">
+        <div class="code-window">
+          <div class="window-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>about_me.js</span>
+            <span class="window-lock">⌘</span>
+          </div>
+
+          <div class="code-lines">
+            <p><span class="line-no">01</span><span class="code-purple">const</span> developer = {</p>
+            <p><span class="line-no">02</span>&nbsp;&nbsp;name: <span class="code-green">'Estudiante DAW'</span>,</p>
+            <p><span class="line-no">03</span>&nbsp;&nbsp;focus: <span class="code-green">'Web development'</span>,</p>
+            <p><span class="line-no">04</span>&nbsp;&nbsp;learning: <span class="code-green">'Every day'</span>,</p>
+            <p><span class="line-no">05</span>&nbsp;&nbsp;curiosity: <span class="code-orange">true</span></p>
+            <p><span class="line-no">06</span>};</p>
+            <p class="code-comment"><span class="line-no">07</span>// siempre construyendo algo nuevo</p>
+            <p><span class="line-no">08</span><span class="code-purple">console</span>.log(developer);<span class="typing-cursor"></span></p>
+          </div>
+
+          <div class="window-footer">
+            <span><span class="footer-green">●</span> LISTO PARA APRENDER</span>
+            <span>UTF-8&nbsp; &nbsp; JS</span>
+          </div>
+        </div>
+
+        <div class="floating-chip chip-top">{"</>"}</div>
+        <div class="floating-chip chip-bottom"><span class="chip-icon">✳</span> BUILD · LEARN · REPEAT</div>
+      </div>
+
+      <div class="scroll-cue"><span></span> DESLIZA PARA EXPLORAR</div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="section-wrap about-section" id="sobre-mi">
+      <div class="section-heading">
+        <p class="eyebrow">01 — SOBRE MÍ</p>
+        <h2>Aprendiendo hoy.<br><span class="muted-word">Creando mañana.</span></h2>
+      </div>
+
+      <div class="about-content">
+        <p class="about-lead">Me interesa cómo las ideas se convierten en experiencias digitales útiles, claras y bien construidas.</p>
+
+        <p class="body-copy">Actualmente curso Desarrollo de Aplicaciones Web (DAW). Estoy ampliando mis conocimientos de programación, desarrollo web y tecnologías de servidor mediante ejercicios prácticos y proyectos personales. Busco seguir aprendiendo, colaborar con otras personas y convertir cada reto en una oportunidad para mejorar.</p>
+
+        <div class="about-facts">
+          <div><span class="fact-number">01</span><span>Curiosidad técnica</span></div>
+          <div><span class="fact-number">02</span><span>Aprendizaje continuo</span></div>
+          <div><span class="fact-number">03</span><span>Atención al detalle</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="projects-section" id="proyectos">
+      <div class="section-wrap">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">02 — TRABAJO SELECCIONADO</p>
+            <h2>Proyectos<span class="muted-word">.</span></h2>
+          </div>
+          <p class="section-side-note">Proyectos reales y en evolución.<br>Más ideas, próximamente.</p>
+        </div>
+
+        <!-- PROJECT 01: DINO RUNNER -->
+        <article class="project-card featured-project">
+          <div class="project-visual dino-visual">
+            <div class="visual-label">PYTHON / GAME DEV</div>
+            <img
+              class="dino-screenshot"
+              src="img/dinosaurio.png"
+              alt="Captura del videojuego Dinosaur Runner desarrollado en Python"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="project-info">
+            <div class="project-topline">
+              <span class="project-index">PROJECT 01</span>
+              <span class="project-status">PROYECTO ANTERIOR</span>
+            </div>
+
+            <h3>Dino Runner</h3>
+            <p>Videojuego inspirado en el dinosaurio de Google, desarrollado en Python durante segundo de Bachillerato. Una primera experiencia creando una mecánica de juego mediante código.</p>
+
+            <div class="tag-list">
+              <span>Python</span>
+              <span>Lógica de programación</span>
+              <span>Videojuegos</span>
+            </div>
+
+            <p class="project-footnote">Proyecto académico anterior. La demo y el repositorio se añadirán cuando estén disponibles.</p>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <!-- PROJECT 02: TASKFLOW -->
+          <article class="project-card small-project">
+            <div class="project-abstract abstract-web">
+              <span class="abstract-symbol">✓</span>
+              <span class="abstract-caption">TASK MANAGEMENT</span>
+              <div class="abstract-lines"><i></i><i></i><i></i><i></i></div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-topline">
+                <span class="project-index">PROJECT 02</span>
+                <span class="project-status">COMPLETADO</span>
+              </div>
+
+              <h3>TaskFlow</h3>
+              <p>Aplicación web de gestión de tareas que permite crear, completar, eliminar y filtrar tareas, consultar estadísticas y guardar los datos en el navegador.</p>
+
+              <div class="tag-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>localStorage</span>
+              </div>
+
+              <a class="project-link" href="taskflow/index.html">
+                Abrir TaskFlow <span>↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: DEVTOOLS -->
+          <article class="project-card small-project">
+            <div class="project-abstract abstract-terminal">
+              <div class="terminal-top">
+                <span>devtools.js</span>
+                <span>● ● ●</span>
+              </div>
+
+              <div class="terminal-content">
+                <p><b>&gt;</b> text.counter()</p>
+                <p class="terminal-output">Developer toolkit</p>
+                <p><b>&gt;</b> generate.password()<span class="terminal-caret">_</span></p>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-topline">
+                <span class="project-index">PROJECT 03</span>
+                <span class="project-status">COMPLETADO</span>
+              </div>
+
+              <h3>DevTools</h3>
+              <p>Caja de herramientas web con contador de caracteres, palabras y líneas, conversor de texto y generador de contraseñas con opciones personalizables.</p>
+
+              <div class="tag-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Web APIs</span>
+              </div>
+
+              <a class="project-link" href="devtools/index.html">
+                Abrir DevTools <span>↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-disclaimer">TaskFlow y DevTools son proyectos funcionales. Dino Runner corresponde a un proyecto académico anterior.</p>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="section-wrap skills-section" id="tecnologias">
+      <div class="section-heading">
+        <p class="eyebrow">03 — CAJA DE HERRAMIENTAS</p>
+        <h2>Tecnologías &<br><span class="muted-word">aprendizaje.</span></h2>
+      </div>
+
+      <div class="skills-content">
+        <p class="body-copy">Estas son algunas de las áreas que forman parte de mi formación. El nivel y la experiencia práctica varían según la tecnología.</p>
+
+        <div class="skill-groups">
+          <div class="skill-group">
+            <span class="skill-label">DESARROLLO WEB</span>
+            <div class="skill-pills">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span class="skill-label">PROGRAMACIÓN</span>
+            <div class="skill-pills">
+              <span>Python</span>
+              <span>Java</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span class="skill-label">SISTEMAS OPERATIVOS</span>
+            <div class="skill-pills">
+              <span>Linux</span>
+              <span>Debian</span>
+              <span>Ubuntu Server</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span class="skill-label">HERRAMIENTAS DE DESARROLLO</span>
+            <div class="skill-pills">
+              <span>Visual Studio Code</span>
+              <span>IntelliJ IDEA</span>
+              <span>Eclipse</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <span class="skill-label">SERVIDORES Y VIRTUALIZACIÓN</span>
+            <div class="skill-pills">
+              <span>Apache</span>
+              <span>VirtualBox</span>
+              <span>Maven</span>
+              <span>Gradle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMACIÓN -->
+    <section class="education-section">
+      <div class="section-wrap education-inner">
+        <div>
+          <p class="eyebrow">04 — FORMACIÓN</p>
+          <h2>Aprender es parte<br>del <span class="muted-word">proceso.</span></h2>
+        </div>
+
+        <div class="education-card">
+          <span class="education-year">ACTUALIDAD</span>
+          <div>
+            <h3>Desarrollo de Aplicaciones Web</h3>
+            <p>Formación profesional de grado superior · DAW</p>
+            <p class="education-detail">Desarrollo web, programación y tecnologías de servidor.</p>
+          </div>
+          <span class="education-icon">↗</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+      <div class="section-wrap contact-inner">
+        <p class="eyebrow">05 — CONTACTO</p>
+
+        <h2>¿Hablamos de<br><span class="muted-word">desarrollo?</span></h2>
+
+        <p class="contact-copy">Estoy abierto a oportunidades de prácticas y a seguir aprendiendo en proyectos reales.</p>
+
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:dgarciacebrian@gmail.com">Escríbeme un correo <span>↗</span></a>
+          <a class="button button-secondary" href="https://github.com/Garmond404" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/david-garc%C3%ADa-cebri%C3%A1n-162633447/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+        </div>
+
+        <p class="contact-reminder">También puedes contactarme directamente por correo electrónico.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer section-wrap">
+    <a class="brand footer-brand" href="#inicio" aria-label="David García - Ir al inicio">
+      <svg class="brand-logo" viewBox="0 0 100 100" role="img" aria-label="DG">
+        <path class="logo-d" d="M12 18 H35 C52 18 62 29 62 44 C62 59 52 70 35 70 H12 Z M28 32 V56 H35 C43 56 48 52 48 44 C48 36 43 32 35 32 Z" fill-rule="evenodd"/>
+        <path class="logo-g" d="M72 43 C66 37 59 36 52 40 L43 50 L48 61 L55 55 C58 53 61 53 65 55 V67 H56 C48 67 43 62 43 54 L31 66 C36 78 46 84 59 84 H78 V45 H59 V57 H66 V70 H59 C48 70 39 62 39 51 C39 37 50 27 63 27 C72 27 79 31 84 37 Z"/>
+        <path class="logo-slash" d="M17 83 L87 14 L76 33 L28 78 Z"/>
+      </svg>
+      <span class="brand-name">DAVID GARCÍA</span>
+    </a>
+
+    <span>Diseñado y desarrollado con curiosidad.</span>
+    <a href="#inicio" class="back-top">VOLVER ARRIBA ↑</a>
+    <span class="copyright">© <span id="year"></span></span>
+  </footer>
+</body>
+</html>

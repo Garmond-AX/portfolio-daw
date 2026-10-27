@@ -1,0 +1,13 @@
+Copyright (c) 2026 David García
+
+Todos los derechos reservados.
+
+El código fuente, el diseño y los componentes originales de este proyecto
+son propiedad de su autor.
+
+No se concede permiso para copiar, modificar, redistribuir o utilizar
+este material en otros proyectos sin autorización previa y por escrito
+del titular de los derechos.
+
+Este aviso no sustituye las licencias de terceros ni se aplica a
+materiales cuyos derechos pertenezcan a otras personas.

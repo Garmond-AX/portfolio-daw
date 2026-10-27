@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <meta name="description" content="DevTools: herramientas web sencillas para desarrolladores.">
+    <title>DevTools | Developer Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <header class="topbar">
+        <a href="#inicio" class="brand">
+            <span class="brand-icon">&lt;/&gt;</span>
+            <span>Dev<span class="silver">Tools</span></span>
+        </a>
+
+        <span class="status">
+            <span class="status-dot"></span>
+            DEVELOPER TOOLKIT
+        </span>
+    </header>
+
+    <main class="container" id="inicio">
+        <section class="hero">
+            <p class="eyebrow">YOUR PERSONAL TOOLKIT</p>
+            <h1>Tools for <span class="silver">developers.</span></h1>
+            <p class="hero-description">
+                Herramientas sencillas para trabajar más rápido.
+                Todo lo que necesitas, en un mismo lugar.
+            </p>
+        </section>
+
+        <section class="tools-grid" aria-label="Herramientas disponibles">
+
+            <!-- TOOL 01: CONTADOR -->
+            <article class="tool-card">
+                <div class="card-header">
+                    <div class="tool-icon">&para;</div>
+                    <span class="tool-number">TOOL_01</span>
+                </div>
+
+                <h2>Contador de texto</h2>
+                <p class="card-description">
+                    Cuenta caracteres, palabras y líneas en tiempo real.
+                </p>
+
+                <label for="text-input">Introduce tu texto</label>
+                <textarea
+                    id="text-input"
+                    placeholder="Escribe o pega tu texto aquí..."
+                    rows="5"
+                ></textarea>
+
+                <div class="text-stats">
+                    <div class="stat">
+                        <span id="char-count">0</span>
+                        <small>Caracteres</small>
+                    </div>
+                    <div class="stat">
+                        <span id="word-count">0</span>
+                        <small>Palabras</small>
+                    </div>
+                    <div class="stat">
+                        <span id="line-count">0</span>
+                        <small>Líneas</small>
+                    </div>
+                </div>
+
+                <button class="button button-secondary" id="clear-text">
+                    Limpiar texto
+                </button>
+            </article>
+
+            <!-- TOOL 02: CONVERSOR -->
+            <article class="tool-card">
+                <div class="card-header">
+                    <div class="tool-icon">Aa</div>
+                    <span class="tool-number">TOOL_02</span>
+                </div>
+
+                <h2>Conversor de texto</h2>
+                <p class="card-description">
+                    Transforma tu texto al formato que necesites.
+                </p>
+
+                <label for="convert-input">Texto original</label>
+                <textarea
+                    id="convert-input"
+                    placeholder="Escribe el texto que quieres convertir..."
+                    rows="4"
+                ></textarea>
+
+                <div class="button-grid">
+                    <button class="button" data-case="upper">MAYÚSCULAS</button>
+                    <button class="button" data-case="lower">minúsculas</button>
+                    <button class="button" data-case="title">Tipo título</button>
+                    <button class="button" data-case="sentence">Tipo oración</button>
+                </div>
+
+                <label for="convert-output">Resultado</label>
+                <textarea
+                    id="convert-output"
+                    placeholder="El resultado aparecerá aquí..."
+                    rows="3"
+                    readonly
+                ></textarea>
+
+                <button class="button button-secondary" id="copy-converted">
+                    Copiar resultado
+                </button>
+            </article>
+
+            <!-- TOOL 03: GENERADOR -->
+            <article class="tool-card">
+                <div class="card-header">
+                    <div class="tool-icon">⌘</div>
+                    <span class="tool-number">TOOL_03</span>
+                </div>
+
+                <h2>Generador de contraseñas</h2>
+                <p class="card-description">
+                    Genera contraseñas aleatorias con las opciones que elijas.
+                </p>
+
+                <div class="password-output">
+                    <input
+                        id="password-output"
+                        type="text"
+                        placeholder="Tu contraseña aparecerá aquí"
+                        readonly
+                        aria-label="Contraseña generada"
+                    >
+                    <button id="copy-password" class="icon-button" aria-label="Copiar contraseña" title="Copiar">
+                        &#10697;
+                    </button>
+                </div>
+
+                <div class="length-header">
+                    <label for="password-length">Longitud</label>
+                    <span id="length-value">16</span>
+                </div>
+
+                <input
+                    id="password-length"
+                    type="range"
+                    min="8"
+                    max="40"
+                    value="16"
+                >
+
+                <div class="options-list">
+                    <label class="option">
+                        <input type="checkbox" id="include-upper" checked>
+                        <span>Mayúsculas (A-Z)</span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="include-lower" checked>
+                        <span>Minúsculas (a-z)</span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="include-numbers" checked>
+                        <span>Números (0-9)</span>
+                    </label>
+                    <label class="option">
+                        <input type="checkbox" id="include-symbols">
+                        <span>Símbolos (!@#$...)</span>
+                    </label>
+                </div>
+
+                <button class="button button-primary" id="generate-password">
+                    Generar contraseña
+                </button>
+
+                <p id="password-message" class="message" aria-live="polite"></p>
+            </article>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-line"></div>
+            <p><span class="silver">DevTools</span> — Built for developers.</p>
+            <span class="footer-credit">HTML · CSS · JAVASCRIPT</span>
+        </footer>
+    </main>
+
+</body>
+</html>

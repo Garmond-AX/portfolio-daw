@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    color-scheme: dark;
+    --bg: #08090b;
+    --panel: #101114;
+    --panel-light: #17191d;
+    --silver: #e4e7eb;
+    --muted: #858a94;
+    --border: rgba(220, 225, 235, 0.14);
+    --accent: #c5cbd4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px 18px;
+    color: var(--silver);
+    background:
+        radial-gradient(ellipse at 50% 0%, #202228 0%, transparent 48%),
+        linear-gradient(180deg, #0b0c0f, #070809 75%);
+    font-family: 'Inter', sans-serif;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--silver);
+    outline-offset: 4px;
+}
+
+.game-shell {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.back-link {
+    color: #b9bec7;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 180ms ease;
+}
+
+.back-link:hover {
+    color: white;
+}
+
+.edition {
+    color: #a9afb9;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.edition span {
+    color: #626873;
+}
+
+.icon-button {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    color: var(--silver);
+    background: #17191d;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 180ms ease, border-color 180ms ease;
+}
+
+.icon-button:hover {
+    background: #24272d;
+    border-color: #626873;
+}
+
+.intro {
+    padding: 48px 0 34px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 14px;
+    color: #8e95a0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.intro h1 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(35px, 7vw, 68px);
+    font-weight: 800;
+    letter-spacing: clamp(2px, 1vw, 8px);
+    line-height: 1.15;
+    text-shadow: 0 0 35px rgba(220, 225, 235, 0.08);
+}
+
+.intro h1 span {
+    color: transparent;
+    background: linear-gradient(180deg, #fff 5%, #9da4af 55%, #555b65 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.subtitle {
+    margin: 15px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.game-panel {
+    position: relative;
+    overflow: hidden;
+    background: #0a0b0e;
+    border: 1px solid rgba(220, 225, 235, 0.2);
+    border-radius: 16px;
+    box-shadow:
+        0 25px 90px rgba(0, 0, 0, 0.55),
+        inset 0 1px rgba(255, 255, 255, 0.035);
+}
+
+.stats {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    right: 24px;
+    left: 24px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.stats > div {
+    display: grid;
+    gap: 5px;
+}
+
+.stats > div:last-child {
+    text-align: right;
+}
+
+.stat-label {
+    color: #7e8490;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.stats strong {
+    color: #e4e7eb;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-variant-numeric: tabular-nums;
+}
+
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 3;
+    background: #0a0b0e;
+    touch-action: manipulation;
+}
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 20px 45px;
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        rgba(8, 9, 11, 0.12),
+        rgba(8, 9, 11, 0.78)
+    );
+}
+
+.game-overlay.hidden {
+    display: none;
+}
+
+.game-overlay .eyebrow {
+    margin-bottom: 12px;
+}
+
+.game-overlay h2 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(19px, 4vw, 32px);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#overlay-message {
+    max-width: 420px;
+    margin: 12px 0 22px;
+    color: #a3a8b1;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.primary-button {
+    min-width: 175px;
+    padding: 14px 24px;
+    color: #101114;
+    background: linear-gradient(135deg, #f4f5f7, #aeb4bf);
+    border: 1px solid #f2f3f5;
+    border-radius: 7px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(220, 225, 235, 0.08);
+    transition: transform 180ms ease, filter 180ms ease;
+}
+
+.primary-button span {
+    margin-right: 8px;
+}
+
+.primary-button:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.game-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 20px;
+    color: #747a85;
+    background: #101114;
+    border-top: 1px solid var(--border);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+#game-status {
+    color: #b7bdc6;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 34px;
+    padding: 26px 10px;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #999faa;
+    font-size: 12px;
+}
+
+kbd {
+    padding: 6px 9px;
+    color: #d8dce3;
+    background: #17191d;
+    border: 1px solid #343840;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: #626873;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .topbar {
+        gap: 8px;
+    }
+
+    .edition {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .intro {
+        padding: 38px 0 25px;
+    }
+
+    .game-panel {
+        border-radius: 10px;
+    }
+
+    .stats {
+        top: 10px;
+        right: 12px;
+        left: 12px;
+    }
+
+    .stats strong {
+        font-size: 12px;
+    }
+
+    .stat-label {
+        font-size: 7px;
+    }
+
+    .game-overlay {
+        padding: 38px 12px 25px;
+    }
+
+    .game-overlay .eyebrow {
+        margin-bottom: 7px;
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    #overlay-message {
+        margin: 7px 0 12px;
+        font-size: 10px;
+    }
+
+    .primary-button {
+        min-width: 135px;
+        padding: 10px 15px;
+        font-size: 9px;
+    }
+
+    .game-footer {
+        padding: 10px;
+        font-size: 7px;
+        letter-spacing: 0.5px;
+    }
+
+    .controls {
+        gap: 12px 18px;
+    }
+
+    .page-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1.7;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
