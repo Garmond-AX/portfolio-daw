@@ -26,7 +26,7 @@ document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
   link.addEventListener("click", (event) => {
     if (link.getAttribute("href") === "#") {
       event.preventDefault();
-      alert("Añade aquí tu enlace real de GitHub o LinkedIn antes de publicar el portfolio.");
+      alert("https://garmond-ax.github.io/portfolio-daw/");
     }
   });
 });
